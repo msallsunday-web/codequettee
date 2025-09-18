@@ -223,11 +223,3 @@
 </body>
 </html>
 """
-
-# Save the HTML code into a file and link
-with open("codequette.html", "w") as file:
-    file.write(html_code)
-
-# Download the file
-files.download("codequette.html")
-
