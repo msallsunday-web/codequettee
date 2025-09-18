@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codequette 💻🎀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #fffafc;
+      color: #4a2c3a;
+    }
+    header {
+      background: #fcdcec;
+      padding: 40px;
+      text-align: center;
+      border-bottom: 4px solid #f5b7d1;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8em;
+      color: #b03060;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4em;
+      color: #663046;
+    }
+    nav {
+      text-align: center;
+      padding: 15px;
+      background: #ffeef7;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #b03060;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: #b03060;
+      margin-bottom: 25px;
+      position: relative;
+    }
+    section h2::after {
+      content: "🎀";
+      position: absolute;
+      right: -25px;
+      top: -10px;
+      font-size: 1.2em;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px 0;
+      border: 2px solid #f5c6da;
+      box-shadow: 0px 4px 12px rgba(240, 160, 190, 0.2);
+    }
+    /* Flashcards */
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .flip-card {
+      background: transparent;
+      width: 180px;
+      height: 220px;
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .card-inner { transform: rotateY(180deg); }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-weight: bold;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .card-front {
+      background: #ffd1dc;
+      color: #000;
+    }
+    .card-back {
+      background: #000;
+      color: #ffd1dc;
+      transform: rotateY(180deg);
+    }
+    /* Gallery */
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .gallery figure { text-align: center; width: 250px; }
+    .gallery img {
+      width: 250px; height: 180px; object-fit: cover;
+      border-radius: 15px;
+      border: 3px solid #ffe4e1;
+      box-shadow: 0px 4px 12px rgba(240,160,190,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,182,193,0.6);
+    }
+    .gallery figcaption {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #663046;
+    }
+    footer {
+      text-align: center;
+      background: #fcdcec;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #663046;
+      border-top: 4px solid #f5b7d1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Codequette 💻🎀</h1>
+    <p>🌸 Learning in Bloom 🌸</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#flashcards">Flashcards</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Hi! I’m Ashley Julienne, a 4th year Computer Science student at PRMSU - Iba Campus.
+      This project reflects how computing can also carry a feminine touch. 🌸</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+      <h3>🎀 Portfolio Website</h3>
+      <p>A coquette-inspired portfolio designed to showcase my coding journey.</p>
+    </div>
+    <div class="card">
+      <h3>💻 Python Mini-Programs</h3>
+      <p>Created small utilities in Python for calculations, grading, and scheduling.</p>
+    </div>
+    <div class="card">
+      <h3>📂 Database Project</h3>
+      <p>Designed a student records database with SQL to practice backend fundamentals.</p>
+    </div>
+  </section>
+
+  <section id="flashcards">
+    <h2>Flashcards</h2>
+    <div class="cards">
+      <div class="flip-card"><div class="card-inner"><div class="card-front">Algorithm</div><div class="card-back">Step-by-step instructions to solve a problem.</div></div></div>
+      <div class="flip-card"><div class="card-inner"><div class="card-front">Python</div><div class="card-back">A popular programming language 🐍</div></div></div>
+      <div class="flip-card"><div class="card-inner"><div class="card-front">Database</div><div class="card-back">An organized collection of structured data.</div></div></div>
+      <div class="flip-card"><div class="card-inner"><div class="card-front">AI</div><div class="card-back">Simulation of human intelligence in machines.</div></div></div>
+      <div class="flip-card"><div class="card-inner"><div class="card-front">Networking</div><div class="card-back">Connecting devices to share data and resources.</div></div></div>
+      <div class="flip-card"><div class="card-inner"><div class="card-front">Cybersecurity</div><div class="card-back">Protecting systems from digital attacks.</div></div></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <figure>
+        <img src="https://images.pexels.com/photos/414520/pexels-photo-414520.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Student coding">
+        <figcaption>💻 Student coding at laptop — dedication in progress.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg" alt="Students group work">
+        <figcaption>📚 Students collaborating and learning together.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60" alt="Coding workspace">
+        <figcaption>🖥️ Calm workspace where ideas become code.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60" alt="Floral design">
+        <figcaption>🌸 Balance of beauty and technology side by side.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:ashley@gmail.com">ashley@gmail.com</a></p>
+      <p>GitHub: <a href="#">github.com/ashley</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with 💻 + 🎀 by Ashley | 2025</p>
+  </footer>
+
+</body>
+</html>
